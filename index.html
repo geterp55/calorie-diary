@@ -21,9 +21,8 @@
 
   <!--FORM: enter a meal-->
          <div class="row">
-            <form class="col s12">
+            <form id="myForm" class="col s12">
               <div class="row">
-
                 <div class="input-field col s3">
                   <input id="calories" type="text" class="validate">
                   <label for="last_name">Calories</label>
@@ -32,21 +31,18 @@
                   <input id="description" type="text" class="validate">
                   <label for="last_name">Description</label>
                 </div>
-
-
                 <div class="input-field col s3">
-                  <select id="food">
+                  <select id="foodGroup">
                     <option value="" disabled selected>Choose your Food Group</option>
-                    <option value="1">Grains</option>
-                    <option value="2">Fruits</option>
-                    <option value="3">Vegetables</option>
-                    <option value="1">Milk Products</option>
-                    <option value="2">Meats</option>
-                    <option value="3">Other foods (fats,oils,sweets)</option>
+                    <option>Grains</option>
+                    <option>Fruits</option>
+                    <option>Vegetables</option>
+                    <option>Milk Products</option>
+                    <option>Meats</option>
+                    <option>Other foods (fats,oils,sweets)</option>
                   </select>
                   <label></label>
                 </div>
-
                 <div class="input-field col s3">
                   <input id="datepicker" type="text" class="validate">
                   <label for="date">Start Date</label>
@@ -58,66 +54,98 @@
                         }
                       </style>
                 </div>
+                <input type="submit" class="waves-effect waves-light btn" id="btnSubmit" value="Submit">
               </div>
             </form>
           </div>
 
-          <a class="waves-effect waves-light btn" id="btnSubmit">Submit</a>
+
 
 
 
   <!--MODAL: Plan out a week's meals-->
-          <a id="open-model" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <a id="open-model" class="waves-effect waves-light btn modal-trigger" href="#modal1">Set Goals</a>
 
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <!--FORM INSIDE OF MODAL-->
-                    <form class="col s12">
-                    <p>Simply enter in a number to represent weekly consumption by category</p>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name">Grains</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name">Fruit</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name">Vegetable</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name">Milk Product</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="first_name" type="text" class="validate">
-                          <label for="first_name">Meat</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s2">
-                          <input id="last_name" type="text" class="validate">
-                          <label for="last_name">Other Foods (fats,oils,sweets)</label>
-                        </div>
-                      </div>
-                    </form>
-            <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
-            </div>
-          </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <!--FORM INSIDE OF MODAL-->
+            <form class="col s12">
+            <p>Simply use the slider to select the a number representing weekly consumption by category</p>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="modalGrains" type="text" class="validate"> -->
+                  <label for="Grains">Grains</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mGrains" min="0" max="30" />
+                    </p>
+                  </form>
 
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="last_name" type="text" class="validate"> -->
+                  <label for="last_name">Fruit</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mFruits" min="0" max="30" />
+                    </p>
+                  </form>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="first_name" type="text" class="validate"> -->
+                  <label for="first_name">Vegetables</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mVegetables" min="0" max="30" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="last_name" type="text" class="validate"> -->
+                  <label for="last_name">Milk Products</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mMilkProds" min="0" max="30" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="first_name" type="text" class="validate"> -->
+                  <label for="first_name">Meat</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mMeats" min="0" max="30" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <!-- <input id="last_name" type="text" class="validate"> -->
+                  <label for="last_name">Other Foods<br> (fats,oils,sweets)</label>
+                  <form action="#">
+                    <p class="range-field">
+                      <input type="range" id="mOtherFoods" min="0" max="30" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </form>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+    </div>
+  </div>
 
   <!--TABLE: display's meals by date-->
            <table class="striped col s6" id="table">
@@ -129,33 +157,9 @@
                     <th data-field="Start Date">Start Date</th>
                 </tr>
               </thead>
-
-              <tbody>
-                <tr>
-                  <td>200</td>
-                  <td>Bread</td>
-                  <td>Grains</td>
-                  <td>06/11/16</td>
-                </tr>
-                <tr>
-                  <td>300</td>
-                  <td>Chicken</td>
-                  <td>Meats</td>
-                  <td>06/11/16</td>
-                </tr>
-                <tr>
-                  <td>400</td>
-                  <td>Pasta</td>
-                  <td>Grains</td>
-                  <td>06/11/16</td>
-                </tr>
-
-              </tbody>
+              <tbody></tbody>
             </table>
-
-
-
-</div>
+          </div>
 </body>
 
 
@@ -172,27 +176,8 @@
 
 
 <!-- js -->
-   <script type="text/javascript">
-//-----BELOW: copy and paste into master js file------------------------------
-     //---MODAL----
-       $(document).ready(function(){
-
-       $('#open-model').on("click", function(){
-        $('#modal1').openModal();
-       });
-
-     //---DATE PICKER----
-       $(function() {
-          $( "#datepicker" ).datepicker();
-        });
-        $('select').material_select();
-        });
-//-----ABOVE: copy and paste into master js file------------------------------
-
-  </script>
-
-
-
-
+<script src="assets/javaScript/ui.js"></script>
+<script src="assets/javaScript/firebase.js"></script>
+</script>
 </body>
 </html>
