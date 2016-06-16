@@ -1,0 +1,24 @@
+body{
+	background-color: #4db6ac;
+	font-family: courier;
+	text-align: center; 
+	padding-right: 40%;
+	padding-left: 40%;
+}
+
+
+#button{
+	margin:auto;
+	display: block;
+}
+
+
+.waves-effect{
+	border-color: #fff;
+	margin:auto;
+	display: block;
+}
+
+
+
+/* Add media queries to change dropdown box and date box to a different format at  768px */
